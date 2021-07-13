@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shopFragment">
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.ShopFragment"
+        android:label="Tienda"
+        tools:layout="@layout/fragment_shop">
+        <action
+            android:id="@+id/action_shopFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_shopFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.DetalleFragment"
+        android:label="Detalle Producto"
+        tools:layout="@layout/fragment_detalle">
+        <action
+            android:id="@+id/action_detalleFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.CarritoFragment"
+        android:label="Mi Carrito"
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/action_carritoFragment_to_clienteFragment"
+            app:destination="@id/clienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clienteFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.ClienteFragment"
+        android:label="Datos del Cliente"
+        tools:layout="@layout/fragment_cliente" >
+        <action
+            android:id="@+id/action_clienteFragment_to_envioFragment"
+            app:destination="@id/envioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/envioFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.EnvioFragment"
+        android:label="Lugar de Envio"
+        tools:layout="@layout/fragment_envio" >
+        <action
+            android:id="@+id/action_envioFragment_to_metodoPagoFragment"
+            app:destination="@id/metodoPagoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/metodoPagoFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.MetodoPagoFragment"
+        android:label="Metodo De Pagos"
+        tools:layout="@layout/fragment_metodo_pago" >
+        <action
+            android:id="@+id/action_metodoPagoFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.PagoFragment"
+        android:label="Pago"
+        tools:layout="@layout/fragment_pago" />
+</navigation>

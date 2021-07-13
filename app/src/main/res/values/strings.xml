@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">ProyectoFinal2</string>
+    <string name="title_activity_menu">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="distritos">
+        <item>ANCÓN</item>
+        <item>ATE VITARTE</item>
+        <item>BARRANCO</item>
+        <item>BREÑA</item>
+        <item>CARABAYLLO</item>
+        <item>CHACLACAYO</item>
+        <item>CHORRILLOS</item>
+        <item>CIENEGUILLA</item>
+        <item>COMAS</item>
+        <item>EL AGUSTINO</item>
+        <item>INDEPENDENCIA</item>
+        <item>JESÚS MARÍA</item>
+        <item>LA MOLINA</item>
+        <item>LA VICTORIA</item>
+        <item>LIMA</item>
+        <item>LINCE</item>
+        <item>LOS OLIVOS</item>
+        <item>LURIGANCHO</item>
+        <item>LURÍN</item>
+        <item>MAGDALENA DEL MAR</item>
+        <item>MIRAFLORES</item>
+        <item>PACHACAMAC</item>
+        <item>PUCUSANA</item>
+        <item>PUEBLO LIBRE</item>
+        <item>PUENTE PIEDRA</item>
+        <item>PUNTA HERMOSA</item>
+        <item>PUNTA NEGRA</item>
+        <item>RÍMAC</item>
+        <item>SAN BARTOLO</item>
+        <item>SAN BORJA</item>
+        <item>SAN ISIDRO</item>
+        <item>SAN JUAN DE LURIGANCHO</item>
+        <item>SAN JUAN DE MIRAFLORES</item>
+        <item>SAN LUIS</item>
+        <item>SAN MARTÍN DE PORRES</item>
+        <item>SAN MIGUEL</item>
+        <item>SANTA ANITA</item>
+        <item>SANTA MARÍA DEL MAR</item>
+        <item>SANTA ROSA</item>
+        <item>SANTIAGO DE SURCO</item>
+        <item>SURQUILLO</item>
+        <item>VILLA EL SALVADOR</item>
+        <item>VILLA MARÍA DEL TRIUNFO</item>
+
+    </string-array>
+</resources>
