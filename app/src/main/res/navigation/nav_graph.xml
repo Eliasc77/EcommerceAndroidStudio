@@ -69,5 +69,23 @@
         android:id="@+id/pagoFragment"
         android:name="edu.pe.idat.proyectofinal2.view.fragments.PagoFragment"
         android:label="Pago"
-        tools:layout="@layout/fragment_pago" />
+        tools:layout="@layout/fragment_pago" >
+        <action
+            android:id="@+id/action_pagoFragment_to_thanksForOrderFragment"
+            app:destination="@id/thanksForOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thanksForOrderFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.ThanksForOrderFragment"
+        android:label="fragment_thanks_for_order"
+        tools:layout="@layout/fragment_thanks_for_order" >
+        <action
+            android:id="@+id/action_thanksForOrderFragment_to_menuFragment2"
+            app:destination="@id/menuFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment2"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
 </navigation>

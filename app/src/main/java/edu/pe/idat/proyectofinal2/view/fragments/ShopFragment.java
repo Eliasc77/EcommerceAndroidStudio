@@ -88,7 +88,7 @@ public class ShopFragment extends Fragment implements ProductListAdapter.ShopInt
                     .setAction("PAGAR AHORA!", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            navController.navigate(R.id.action_shopFragment_to_carritoFragment);
+                        navController.navigate(R.id.action_shopFragment_to_carritoFragment);
                         }
                     }).show();
         }else{

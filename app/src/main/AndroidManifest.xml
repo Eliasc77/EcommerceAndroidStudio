@@ -11,8 +11,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.ProyectoFinal2">
+        android:theme="@style/Theme.ProyectoFinal2"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.LoginActivity"></activity>
         <activity
             android:name=".view.MenuActivity"
             android:label="@string/title_activity_menu">
@@ -21,11 +22,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".view.MainActivity">
-
-        </activity>
+        <activity android:name=".view.MainActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

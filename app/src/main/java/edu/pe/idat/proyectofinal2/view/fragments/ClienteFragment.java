@@ -5,16 +5,32 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import edu.pe.idat.proyectofinal2.R;
+import edu.pe.idat.proyectofinal2.commons.Constantes;
+import edu.pe.idat.proyectofinal2.commons.VolleySingleton;
 import edu.pe.idat.proyectofinal2.databinding.FragmentClienteBinding;
+import edu.pe.idat.proyectofinal2.models.Cliente;
+import edu.pe.idat.proyectofinal2.viewmodels.ClientViewModel;
 
 
 public class ClienteFragment extends Fragment {
@@ -23,6 +39,10 @@ public class ClienteFragment extends Fragment {
     EditText nombre, apellido, dni, celular;
 
     NavController navController;
+
+    ClientViewModel clientViewModel;
+
+    Cliente cliente;
 
     public ClienteFragment() {
         // Required empty public constructor
@@ -48,11 +68,27 @@ public class ClienteFragment extends Fragment {
         dni = fragmentClienteBinding.tvDni;
         celular = fragmentClienteBinding.tvCelular;
 
-        fragmentClienteBinding.btnRegistrarCliente.setOnClickListener(v->{
-            if(!validar()){
-                return;
-            }else{
-                navController.navigate(R.id.action_clienteFragment_to_envioFragment);
+        clientViewModel = new ViewModelProvider(getActivity()).get(ClientViewModel.class);
+
+        fragmentClienteBinding.btnRegistrarCliente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cliente = new Cliente();
+                cliente.setNombre(nombre.getText().toString());
+                cliente.setApellido(apellido.getText().toString());
+                cliente.setDni(dni.getText().toString());
+                cliente.setCelular(celular.getText().toString());
+
+
+                if(!validar()){
+                    return;
+                }else{
+                    //save(cliente);
+                    clientViewModel.saveCliente(getActivity(),cliente);
+                    navController.navigate(R.id.action_clienteFragment_to_envioFragment);
+                }
+                //clientViewModel.saveCliente(getActivity(), cliente);
+
             }
         });
 
@@ -81,4 +117,7 @@ public class ClienteFragment extends Fragment {
         }
         return response;
     }
+
+
+
 }

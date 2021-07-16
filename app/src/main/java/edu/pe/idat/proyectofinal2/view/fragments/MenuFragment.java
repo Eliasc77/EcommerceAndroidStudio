@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,6 +51,9 @@ public class MenuFragment extends Fragment implements CategoriaAdapter.Categoria
     private CategoriaViewModel categoriaViewModel;
     private PopularProductViewModel popularProductViewModel;
 
+    //prueba
+    NavController navController;
+
     FragmentMenuBinding fragmentMenuBinding;
     public MenuFragment() {
         // Required empty public constructor
@@ -76,7 +81,7 @@ public class MenuFragment extends Fragment implements CategoriaAdapter.Categoria
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        navController = Navigation.findNavController(view);
 
         //Categoria
         categoriaAdapter = new CategoriaAdapter(this);
@@ -115,8 +120,14 @@ public class MenuFragment extends Fragment implements CategoriaAdapter.Categoria
         categoriaViewModel.setCategoria(categoria);
 
         SharedPreferencesManager.setSomeIntValue(new Constantes().PREF_ID_CATEGORIA,categoria.getIdcategoria());
+
+
+
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
+
+
+
 
     }
 }

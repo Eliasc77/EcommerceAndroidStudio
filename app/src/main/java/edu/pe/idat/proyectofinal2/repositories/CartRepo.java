@@ -18,7 +18,7 @@ public class CartRepo {
     //metodo para retornar el livedata
     public LiveData<List<CarritoItem>> getCart(){
         if(mutableCart.getValue() == null){
-            //inicializam,os el carrto si esta vacio
+            //inicializamos el carrto si esta vacio
             initCart();
         }
         return mutableCart;

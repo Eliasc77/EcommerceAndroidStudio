@@ -19,6 +19,8 @@ import java.util.List;
 
 import edu.pe.idat.proyectofinal2.R;
 import edu.pe.idat.proyectofinal2.adapters.CarritoListAdapter;
+import edu.pe.idat.proyectofinal2.commons.Constantes;
+import edu.pe.idat.proyectofinal2.commons.SharedPreferencesManager;
 import edu.pe.idat.proyectofinal2.databinding.FragmentCarritoBinding;
 import edu.pe.idat.proyectofinal2.models.CarritoItem;
 import edu.pe.idat.proyectofinal2.viewmodels.ProductViewModel;
@@ -76,6 +78,7 @@ public class CarritoFragment extends Fragment implements CarritoListAdapter.Carr
             public void onChanged(Double aDouble) {
                 fragmentCarritoBinding.igvPrice.setText("$ "+ Math.round(aDouble * 0.18));
                 fragmentCarritoBinding.totalPriceCart.setText("$ "+aDouble.toString());
+
             }
         });
 

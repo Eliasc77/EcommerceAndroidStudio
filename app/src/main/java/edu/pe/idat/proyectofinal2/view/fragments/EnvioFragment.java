@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -18,13 +19,19 @@ import java.util.List;
 
 import edu.pe.idat.proyectofinal2.R;
 import edu.pe.idat.proyectofinal2.databinding.FragmentEnvioBinding;
+import edu.pe.idat.proyectofinal2.models.Envio;
+import edu.pe.idat.proyectofinal2.viewmodels.EnvioViewModel;
 
 
 public class EnvioFragment extends Fragment {
 
     FragmentEnvioBinding fragmentEnvioBinding;
-    EditText direccion;
+    EditText direccion, distrito,referencia;
+
+    EnvioViewModel envioViewModel;
     NavController navController;
+
+    Envio envio;
 
     public EnvioFragment() {
         // Required empty public constructor
@@ -45,19 +52,36 @@ public class EnvioFragment extends Fragment {
         // Inflate the layout for this fragment
         fragmentEnvioBinding = FragmentEnvioBinding.inflate(inflater, container , false);
 
-
         return fragmentEnvioBinding.getRoot();
-
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        direccion = fragmentEnvioBinding.direccion;
+
         navController = Navigation.findNavController(view);
 
-        fragmentEnvioBinding.btnRegistrarEnvio.setOnClickListener( v->{
-            navController.navigate(R.id.action_envioFragment_to_metodoPagoFragment);
+        direccion = fragmentEnvioBinding.direccion;
+        distrito = fragmentEnvioBinding.autoCompleteTextView;
+        referencia = fragmentEnvioBinding.referencia;
+
+        envioViewModel = new ViewModelProvider(getActivity()).get(EnvioViewModel.class);
+
+        fragmentEnvioBinding.btnRegistrarEnvio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                envio = new Envio();
+                envio.setDistrito(distrito.getText().toString());
+                envio.setDireccion(direccion.getText().toString());
+                envio.setReferencia(referencia.getText().toString());
+
+                if(!validar()){
+                    return;
+                }else{
+                    envioViewModel.saveEnvio(getActivity(), envio);
+                    navController.navigate(R.id.action_envioFragment_to_metodoPagoFragment);
+                }
+            }
         });
 
     }
