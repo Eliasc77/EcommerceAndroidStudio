@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -63,6 +64,7 @@ public class ShopFragment extends Fragment implements ProductListAdapter.ShopInt
         productListAdapter = new ProductListAdapter(this);
         fragmentShopBinding.shopRecycler.setAdapter(productListAdapter);
 
+
         id = SharedPreferencesManager.getSomeIntValue(Constantes.PREF_ID_CATEGORIA);
 
 
@@ -71,6 +73,7 @@ public class ShopFragment extends Fragment implements ProductListAdapter.ShopInt
             @Override
             public void onChanged(List<Product> products) {
                 productListAdapter.submitList(products);
+                title(SharedPreferencesManager.getSomeStringValue(Constantes.PREF_DESC_CATEGORIA));
             }
         });
 
@@ -102,5 +105,9 @@ public class ShopFragment extends Fragment implements ProductListAdapter.ShopInt
         //Log.d(TAG, "onItemClick: "+ product.toString());
         productViewModel.setProduct(product);
         navController.navigate(R.id.action_shopFragment_to_detalleFragment);
+    }
+
+    public void title(String title){
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title);
     }
 }

@@ -25,4 +25,13 @@ public class SharedPreferencesManager {
     public static  int getSomeIntValue(String nombrePropiedad){
         return  getSharedPreferences().getInt(nombrePropiedad,0);
     }
+
+    public static void setSomeStringValue(String nombrePropiedad,String valor){
+        SharedPreferences.Editor editor = getSharedPreferences().edit();
+        editor.putString(nombrePropiedad, valor);
+        editor.commit();
+    }
+    public static String getSomeStringValue(String nombrePropiedad){
+        return getSharedPreferences().getString(nombrePropiedad,"");
+    }
 }

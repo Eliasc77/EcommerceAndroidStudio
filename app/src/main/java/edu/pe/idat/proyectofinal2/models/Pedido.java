@@ -5,17 +5,24 @@ public class Pedido {
     private int idpedido;
     private int idcliente;
     private double totalpagar;
-    private int iddelivery;
+    private String distrito;
+    private String direccion;
+    private String referencia;
+    private boolean estado;
     private int idtipopago;
 
     public Pedido() {
     }
 
-    public Pedido(int idpedido, int idcliente, double totalpagar, int iddelivery, int idtipopago) {
+    public Pedido(int idpedido, int idcliente, double totalpagar, String distrito,
+                  String direccion, String referencia, boolean estado, int idtipopago) {
         this.idpedido = idpedido;
         this.idcliente = idcliente;
         this.totalpagar = totalpagar;
-        this.iddelivery = iddelivery;
+        this.distrito = distrito;
+        this.direccion = direccion;
+        this.referencia = referencia;
+        this.estado = estado;
         this.idtipopago = idtipopago;
     }
 
@@ -43,12 +50,36 @@ public class Pedido {
         this.totalpagar = totalpagar;
     }
 
-    public int getIddelivery() {
-        return iddelivery;
+    public String getDistrito() {
+        return distrito;
     }
 
-    public void setIddelivery(int iddelivery) {
-        this.iddelivery = iddelivery;
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getReferencia() {
+        return referencia;
+    }
+
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 
     public int getIdtipopago() {

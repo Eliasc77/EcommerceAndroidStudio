@@ -32,6 +32,7 @@ import java.util.List;
 import edu.pe.idat.proyectofinal2.R;
 import edu.pe.idat.proyectofinal2.adapters.CategoriaAdapter;
 import edu.pe.idat.proyectofinal2.adapters.PopularProductAdapter;
+import edu.pe.idat.proyectofinal2.adapters.ProductListAdapter;
 import edu.pe.idat.proyectofinal2.commons.Constantes;
 import edu.pe.idat.proyectofinal2.commons.SharedPreferencesManager;
 import edu.pe.idat.proyectofinal2.databinding.FragmentMenuBinding;
@@ -40,6 +41,7 @@ import edu.pe.idat.proyectofinal2.models.Product;
 import edu.pe.idat.proyectofinal2.view.MainActivity;
 import edu.pe.idat.proyectofinal2.viewmodels.CategoriaViewModel;
 import edu.pe.idat.proyectofinal2.viewmodels.PopularProductViewModel;
+import edu.pe.idat.proyectofinal2.viewmodels.ProductViewModel;
 
 
 public class MenuFragment extends Fragment implements CategoriaAdapter.CategoriaInterface {
@@ -50,6 +52,9 @@ public class MenuFragment extends Fragment implements CategoriaAdapter.Categoria
 
     private CategoriaViewModel categoriaViewModel;
     private PopularProductViewModel popularProductViewModel;
+    private ProductViewModel productViewModel;
+
+    ProductListAdapter productListAdapter;
 
     //prueba
     NavController navController;
@@ -74,7 +79,6 @@ public class MenuFragment extends Fragment implements CategoriaAdapter.Categoria
 
 
 
-
         return fragmentMenuBinding.getRoot();
     }
 
@@ -82,6 +86,10 @@ public class MenuFragment extends Fragment implements CategoriaAdapter.Categoria
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
+
+        //product
+        productViewModel = new ViewModelProvider(requireActivity()).get(ProductViewModel.class);
+        //productListAdapter = new ProductListAdapter(this);
 
         //Categoria
         categoriaAdapter = new CategoriaAdapter(this);
@@ -120,14 +128,13 @@ public class MenuFragment extends Fragment implements CategoriaAdapter.Categoria
         categoriaViewModel.setCategoria(categoria);
 
         SharedPreferencesManager.setSomeIntValue(new Constantes().PREF_ID_CATEGORIA,categoria.getIdcategoria());
-
+        SharedPreferencesManager.setSomeStringValue(new Constantes().PREF_DESC_CATEGORIA, categoria.getDescripcion());
 
 
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
 
-
-
-
     }
+
+
 }

@@ -2,8 +2,9 @@
     <string name="app_name">ProyectoFinal2</string>
     <string name="title_activity_menu">MainActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">My Order</string>
+    <string name="title_notifications">Account</string>
+    <string name="titulo_categoria">Titulo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

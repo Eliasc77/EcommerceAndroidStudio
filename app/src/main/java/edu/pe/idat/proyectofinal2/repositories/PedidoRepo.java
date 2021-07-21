@@ -28,7 +28,10 @@ public class PedidoRepo {
         try {
             object.put("idcliente", pedido.getIdcliente());
             object.put("totalpagar", pedido.getTotalpagar());
-            object.put("iddelivery", pedido.getIddelivery());
+            object.put("distrito", pedido.getDistrito());
+            object.put("direccion", pedido.getDireccion());
+            object.put("referencia", pedido.getReferencia());
+            object.put("estado", pedido.isEstado());
             object.put("idtipopago", pedido.getIdtipopago());
 
         }catch (JSONException x){

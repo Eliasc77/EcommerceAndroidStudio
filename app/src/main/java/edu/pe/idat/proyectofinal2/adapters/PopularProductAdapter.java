@@ -16,6 +16,7 @@ public class PopularProductAdapter extends ListAdapter<Product,PopularProductAda
 
     public PopularProductAdapter() {
         super(Product.itemCallback);
+
     }
 
     @NonNull
@@ -23,7 +24,6 @@ public class PopularProductAdapter extends ListAdapter<Product,PopularProductAda
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         PopularItemBinding pItemBinding = PopularItemBinding.inflate(layoutInflater, parent,false);
-
         return new ViewHolder(pItemBinding);
     }
 
@@ -41,4 +41,6 @@ public class PopularProductAdapter extends ListAdapter<Product,PopularProductAda
             this.popularItemBinding = binding;
         }
     }
+
+
 }

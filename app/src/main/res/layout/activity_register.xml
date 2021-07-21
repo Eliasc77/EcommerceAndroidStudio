@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.LoginActivity">
+    tools:context=".view.RegisterActivity">
+
 
     <ImageView
         android:id="@+id/imageView11"
@@ -15,7 +16,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/google" />
+        android:background="@drawable/google" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -26,21 +27,9 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toEndOf="@+id/imageView11"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/instagram" />
+        android:background="@drawable/instagram" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/comfortaa_light"
-        android:text="Forgot Password?"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
 
     <TextView
         android:id="@+id/textView6"
@@ -48,25 +37,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:fontFamily="@font/comfortaa_light"
-        android:text="Dont Have An Account?"
-        android:textSize="12sp"
-        android:textStyle="bold"
+        android:text="Already Have An Account?"
+        android:textSize="14sp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
     <TextView
-        android:id="@+id/tvregister"
+        android:id="@+id/tvsignin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:fontFamily="@font/comfortaa_light"
-        android:text="Sign Up"
+        android:text="Sign In"
         android:textColor="#DA0505"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.147"
@@ -81,11 +70,11 @@
         android:fontFamily="@font/comfortaa_light"
         android:text="OR"
         android:textColor="#0E0D0D"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnregister" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -95,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baruckban" />
+        android:background="@drawable/baruckban" />
 
     <TextView
         android:id="@+id/textView3"
@@ -103,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/comfortaa_light"
-        android:text="Iniciar Sesion"
+        android:text="Registrarse"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etemail"
+            android:id="@+id/etregemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/text_bg_rectangle"
@@ -141,7 +130,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etpassword"
+            android:id="@+id/etregpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/text_bg_rectangle"
@@ -150,16 +139,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnlogin"
+        android:id="@+id/btnregister"
         android:layout_width="350dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/golden"
-        android:text="Log In"
+        android:text="Register"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -170,7 +160,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.862"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnregister"
         app:srcCompat="@drawable/vectorline" />
 
     <ImageView
@@ -182,7 +172,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnregister"
         app:srcCompat="@drawable/vectorline" />
 
     <ImageView
@@ -194,6 +184,6 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/facebook" />
+        android:background="@drawable/facebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

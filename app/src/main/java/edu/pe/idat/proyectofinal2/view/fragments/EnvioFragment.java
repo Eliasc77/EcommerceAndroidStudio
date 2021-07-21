@@ -78,7 +78,7 @@ public class EnvioFragment extends Fragment {
                 if(!validar()){
                     return;
                 }else{
-                    envioViewModel.saveEnvio(getActivity(), envio);
+                    envioViewModel.setEnvio(envio);
                     navController.navigate(R.id.action_envioFragment_to_metodoPagoFragment);
                 }
             }

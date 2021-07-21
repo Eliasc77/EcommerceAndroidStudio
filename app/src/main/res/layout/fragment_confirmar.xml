@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".view.fragments.ConfirmarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:paddingTop="50dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_box"
+                    android:translationX="48dp"
+                    tools:layout_editor_absoluteY="27dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:translationX="66dp"
+                    android:translationY="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Datos"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+
+                    android:textSize="16sp"
+                    android:translationX="48dp"
+                    android:translationY="46dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:translationX="150dp"
+                    android:translationY="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Envio"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textSize="16sp"
+                    android:translationX="134dp"
+                    android:translationY="46dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:translationX="234dp"
+                    android:translationY="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Metodo"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textSize="16sp"
+                    android:translationX="210dp"
+                    android:translationY="46dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:translationX="318dp"
+                    android:translationY="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pedido"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:translationX="295dp"
+                    android:translationY="46dp" />
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_line_outlined"
+                    android:translationX="25dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="86dp"
+                    android:layout_marginLeft="84dp"
+                    android:background="@drawable/ic_line_outlined"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_box"
+                    android:translationX="132dp"
+                    tools:layout_editor_absoluteY="27dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="109dp"
+                    android:layout_marginLeft="112dp"
+                    android:background="@drawable/ic_line_outlined"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginLeft="208dp"
+                    android:background="@drawable/ic_line_outlined"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="30dp" />
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="192dp"
+                    android:layout_marginLeft="208dp"
+                    android:background="@drawable/ic_line_outlined"
+                    android:translationX="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_box"
+                    android:translationX="216dp"
+                    tools:layout_editor_absoluteY="27dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="254dp"
+                    android:layout_marginLeft="208dp"
+                    android:background="@drawable/ic_line_outlined"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="28dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="277dp"
+                    android:layout_marginLeft="208dp"
+                    android:background="@drawable/ic_line_outlinedred"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="28dp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_boxred"
+                    android:translationX="300dp"
+                    tools:layout_editor_absoluteY="27dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="338dp"
+                    android:layout_marginLeft="208dp"
+                    android:background="@drawable/ic_line_outlinedred"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="28dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Informacion de Envio :"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Total a Pagar :"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rec_resume" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:text="************9220"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Metodo de Pago :"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvreferencia" />
+
+        <Button
+            android:id="@+id/btnconfirmarpago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/red"
+            android:text="CONFIRMAR PEDIDO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/tvTotalP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toTopOf="@+id/textView16"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Resumen Del Pedido :"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/tvdirec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:text="Av Tomas Valle 19"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintBottom_toBottomOf="@+id/tvdist"
+            app:layout_constraintStart_toEndOf="@+id/tvdist"
+            app:layout_constraintTop_toTopOf="@+id/tvdist"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvdist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:text="GAMARRA, "
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/tvreferencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:text="Piso 2 departamento 1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvdist" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_resume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

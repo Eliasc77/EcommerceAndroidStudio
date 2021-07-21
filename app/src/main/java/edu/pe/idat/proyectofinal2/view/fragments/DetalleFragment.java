@@ -13,12 +13,14 @@ import android.view.ViewGroup;
 
 import edu.pe.idat.proyectofinal2.R;
 import edu.pe.idat.proyectofinal2.databinding.FragmentDetalleBinding;
+import edu.pe.idat.proyectofinal2.viewmodels.PopularProductViewModel;
 import edu.pe.idat.proyectofinal2.viewmodels.ProductViewModel;
 
 
 public class DetalleFragment extends Fragment {
     FragmentDetalleBinding fragmentDetalleBinding;
     ProductViewModel productViewModel;
+    PopularProductViewModel popularProductViewModel;
 
     public DetalleFragment() {
         // Required empty public constructor
@@ -38,6 +40,10 @@ public class DetalleFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         productViewModel = new ViewModelProvider(requireActivity()).get(ProductViewModel.class);
-        fragmentDetalleBinding.setProductViewModel(productViewModel);
+        //popularProductViewModel = new ViewModelProvider(requireActivity()).get(PopularProductViewModel.class);
+
+
+            fragmentDetalleBinding.setProductViewModel(productViewModel);
+
     }
 }

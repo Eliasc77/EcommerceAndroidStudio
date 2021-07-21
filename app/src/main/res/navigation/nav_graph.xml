@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/shopFragment"
         android:name="edu.pe.idat.proyectofinal2.view.fragments.ShopFragment"
-        android:label="Tienda"
+        android:label="@string/titulo_categoria"
         tools:layout="@layout/fragment_shop">
         <action
             android:id="@+id/action_shopFragment_to_detalleFragment"
@@ -71,21 +71,21 @@
         android:label="Pago"
         tools:layout="@layout/fragment_pago" >
         <action
-            android:id="@+id/action_pagoFragment_to_thanksForOrderFragment"
-            app:destination="@id/thanksForOrderFragment" />
+            android:id="@+id/action_pagoFragment_to_confirmarFragment"
+            app:destination="@id/confirmarFragment" />
     </fragment>
     <fragment
         android:id="@+id/thanksForOrderFragment"
         android:name="edu.pe.idat.proyectofinal2.view.fragments.ThanksForOrderFragment"
-        android:label="fragment_thanks_for_order"
-        tools:layout="@layout/fragment_thanks_for_order" >
-        <action
-            android:id="@+id/action_thanksForOrderFragment_to_menuFragment2"
-            app:destination="@id/menuFragment2" />
-    </fragment>
+        android:label="Gracias por su compra"
+        tools:layout="@layout/fragment_thanks_for_order"/>
     <fragment
-        android:id="@+id/menuFragment2"
-        android:name="edu.pe.idat.proyectofinal2.view.fragments.MenuFragment"
-        android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        android:id="@+id/confirmarFragment"
+        android:name="edu.pe.idat.proyectofinal2.view.fragments.ConfirmarFragment"
+        android:label="Confirmar Compra"
+        tools:layout="@layout/fragment_confirmar">
+        <action
+            android:id="@+id/action_confirmarFragment_to_thanksForOrderFragment"
+            app:destination="@id/thanksForOrderFragment" />
+    </fragment>
 </navigation>

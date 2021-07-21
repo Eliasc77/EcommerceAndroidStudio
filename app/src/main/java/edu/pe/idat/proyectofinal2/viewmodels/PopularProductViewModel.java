@@ -15,9 +15,11 @@ import edu.pe.idat.proyectofinal2.repositories.PopularProductRepo;
 
 public class PopularProductViewModel extends ViewModel {
     PopularProductRepo popularProductRepo = new PopularProductRepo();
-    MutableLiveData<Product> mutableProduct = new MutableLiveData<>();
+    MutableLiveData<Product> mutablePopProduct = new MutableLiveData<>();
 
     public LiveData<List<Product>> getPopularProducto(Context context){
         return popularProductRepo.getPopularProducts(context);
     }
+
+
 }

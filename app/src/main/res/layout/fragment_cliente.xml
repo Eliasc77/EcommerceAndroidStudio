@@ -106,9 +106,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pago"
+                android:text="Pedido"
+                android:translationX="295dp"
                 android:textSize="16sp"
-                android:translationX="305dp"
                 android:translationY="46dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
@@ -265,6 +265,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tv_dni"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="DNI" />
@@ -285,6 +286,7 @@
                     android:id="@+id/tv_celular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="number"
                     android:hint="Celular" />
             </com.google.android.material.textfield.TextInputLayout>
 

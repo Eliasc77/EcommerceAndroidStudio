@@ -57,4 +57,10 @@ public class ProductViewModel extends ViewModel {
     public LiveData<Double>getTotalPrice(){
         return cartRepo.getTotalPrice();
     }
+
+
+    //resetear carrito
+    public void resetCart(){
+        cartRepo.initCart();
+    }
 }

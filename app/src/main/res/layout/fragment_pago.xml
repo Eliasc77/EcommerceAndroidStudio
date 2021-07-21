@@ -80,6 +80,7 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 android:textStyle="bold"
                 android:textSize="16sp"
+                android:textColor="@color/red"
                 android:translationX="234dp"
                 android:translationY="10dp" />
 
@@ -89,6 +90,7 @@
                 android:text="Metodo"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 android:textSize="16sp"
+                android:textColor="@color/red"
                 android:translationX="210dp"
                 android:translationY="46dp" />
 
@@ -97,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="4"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:textColor="@color/red"
+
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:translationX="318dp"
@@ -106,11 +108,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pago"
+                android:text="Pedido"
+                android:translationX="295dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:textColor="@color/red"
+
                 android:textSize="16sp"
-                android:translationX="305dp"
+
                 android:translationY="46dp" />
 
 
@@ -161,7 +164,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="192dp"
                 android:layout_marginLeft="208dp"
-                android:background="@drawable/ic_line_outlined"
+                android:background="@drawable/ic_line_outlinedred"
                 app:layout_constraintStart_toStartOf="parent"
                 android:translationX="1dp"
                 tools:layout_editor_absoluteY="30dp" />
@@ -169,7 +172,7 @@
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:background="@drawable/ic_box"
+                android:background="@drawable/ic_boxred"
                 android:translationX="216dp"
                 tools:layout_editor_absoluteY="27dp" />
 
@@ -178,7 +181,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="254dp"
                 android:layout_marginLeft="208dp"
-                android:background="@drawable/ic_line_outlined"
+                android:background="@drawable/ic_line_outlinedred"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="28dp" />
 
@@ -187,14 +190,14 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="277dp"
                 android:layout_marginLeft="208dp"
-                android:background="@drawable/ic_line_outlinedred"
+                android:background="@drawable/ic_line_outlined"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="28dp" />
 
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:background="@drawable/ic_boxred"
+                android:background="@drawable/ic_box"
                 android:translationX="300dp"
                 tools:layout_editor_absoluteY="27dp" />
 
@@ -203,7 +206,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="338dp"
                 android:layout_marginLeft="208dp"
-                android:background="@drawable/ic_line_outlinedred"
+                android:background="@drawable/ic_line_outlined"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="28dp" />
 
@@ -248,6 +251,7 @@
                     android:id="@+id/tv_nrotarjeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="number"
                     android:hint="Nro Tarjeta :" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -311,6 +315,7 @@
                     android:id="@+id/tv_cvv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="number"
                     android:hint="CVV" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -319,7 +324,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="PAGAR"
+                android:text="CONTINUAR"
                 android:backgroundTint="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.6"

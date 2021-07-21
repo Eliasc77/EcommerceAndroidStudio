@@ -42,7 +42,7 @@ public class TipoPagoRepo {
                     @Override
                     public void onResponse(JSONObject response) {
 
-                        Log.d("param", String.valueOf(response));
+                        Log.d("tipo", String.valueOf(response));
                         try {
                             SharedPreferencesManager.setSomeIntValue(Constantes.PREF_ID_PAGO, response.getInt("idtipopago"));
                         }catch (JSONException x) {

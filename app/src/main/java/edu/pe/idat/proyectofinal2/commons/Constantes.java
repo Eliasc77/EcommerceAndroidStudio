@@ -2,6 +2,10 @@ package edu.pe.idat.proyectofinal2.commons;
 
 public class Constantes {
 
+    //LOGIN
+    public final String URL_LOGIN ="http://10.0.2.2:9898/login/";
+    public final String URL_LOGIN_SAVE = "http://10.0.2.2:9898/login/save/";
+
     //PRODUCTOS
     public final String URL_POPULAR_PRODUCTS ="http://10.0.2.2:9898/producto/status/popular";
     public final String URL_PRODUCTS_BY_CATEGORY="http://10.0.2.2:9898/producto/categoria/";
@@ -12,6 +16,7 @@ public class Constantes {
     //CATEGORIA
     public final String URL_CATEGORIA ="http://10.0.2.2:9898/categorias/show/";
     public static  final String PREF_ID_CATEGORIA = "PREF_ID_CATEGORIA";
+    public static  final String PREF_DESC_CATEGORIA = "PREF_DESC_CATEGORIA";
 
 
 
