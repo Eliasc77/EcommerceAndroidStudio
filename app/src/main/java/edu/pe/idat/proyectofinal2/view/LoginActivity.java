@@ -31,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        getSupportActionBar().hide();
+
         binding.tvregister.setOnClickListener(view ->{
             Intent intent = new Intent(this,RegisterActivity.class);
             startActivity(intent);

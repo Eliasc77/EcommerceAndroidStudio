@@ -12,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.pe.idat.proyectofinal2.R;
+import edu.pe.idat.proyectofinal2.adapters.CarritoListAdapter;
 import edu.pe.idat.proyectofinal2.databinding.FragmentDetalleBinding;
+import edu.pe.idat.proyectofinal2.models.CarritoItem;
 import edu.pe.idat.proyectofinal2.viewmodels.PopularProductViewModel;
 import edu.pe.idat.proyectofinal2.viewmodels.ProductViewModel;
 
@@ -46,4 +48,6 @@ public class DetalleFragment extends Fragment {
             fragmentDetalleBinding.setProductViewModel(productViewModel);
 
     }
+
+
 }

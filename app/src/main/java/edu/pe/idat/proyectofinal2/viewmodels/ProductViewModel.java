@@ -25,6 +25,10 @@ public class ProductViewModel extends ViewModel {
         return productoRepo.getProducts(context, id);
     }
 
+    public LiveData<List<Product>>getProductStrings(Context context, String url){
+        return productoRepo.getProductStrings(context, url);
+    }
+
     public void setProduct(Product product){
         mutableProduct.setValue(product);
     }

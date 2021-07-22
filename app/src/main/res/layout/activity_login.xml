@@ -104,6 +104,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/comfortaa_light"
         android:text="Iniciar Sesion"
+
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

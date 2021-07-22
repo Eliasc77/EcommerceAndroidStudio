@@ -1,10 +1,12 @@
 package edu.pe.idat.proyectofinal2.view.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,8 +19,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.pe.idat.proyectofinal2.R;
@@ -78,6 +91,8 @@ public class ShopFragment extends Fragment implements ProductListAdapter.ShopInt
         });
 
         navController = Navigation.findNavController(view);
+
+
     }
 
     @Override
@@ -110,4 +125,6 @@ public class ShopFragment extends Fragment implements ProductListAdapter.ShopInt
     public void title(String title){
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title);
     }
+
+
 }

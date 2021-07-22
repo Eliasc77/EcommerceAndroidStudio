@@ -145,10 +145,8 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/golden"
         android:text="Register"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <ImageView

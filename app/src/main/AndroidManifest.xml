@@ -14,15 +14,17 @@
         android:theme="@style/Theme.ProyectoFinal2"
         android:usesCleartextTraffic="true">
         <activity android:name=".view.RegisterActivity"></activity>
-        <activity android:name=".view.LoginActivity" />
-        <activity
-            android:name=".view.MenuActivity"
-            android:label="@string/title_activity_menu">
+        <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MenuActivity"
+            android:label="@string/title_activity_menu">
+
         </activity>
         <activity android:name=".view.MainActivity" />
 
